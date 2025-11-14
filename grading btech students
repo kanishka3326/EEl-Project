@@ -1,0 +1,53 @@
+#include <stdio.h> 
+int main()  
+{ 
+int n,ma,p,ch,e,cs,avg,tot; 
+char na[8]; 
+printf("\n Enter no. of students in your class:- "); 
+scanf("%d",&n); 
+for(int i=0;i<=n;i++) 
+{ 
+printf("\n Enter your name:- "); 
+scanf("%s",&na); 
+printf("\n Enter your physics marks:-"); 
+scanf("%d",&p); 
+printf("\n Enter your mathematics marks:-"); 
+scanf("%d",&ma); 
+printf("\n Enter your chemsitry marks:-"); 
+scanf("%d",&ch); 
+printf("\n Enter your english marks:-"); 
+scanf("%d",&e); 
+printf("\n Enter your computer science marks:-"); 
+scanf("%d",&cs); 
+tot=p+ma+ch+e+cs; 
+avg=tot/5; 
+printf("\n Your name is %s",na); 
+printf("\n Your marks in maths is %d",ma); 
+printf("\n Your marks in physics is %d",p); 
+printf("\n Your marks in chemistry is %d",ch); 
+printf("\n Your marks in english is %d",e); 
+printf("\n Your marks in computer science is %d",cs); 
+printf("\n Your avg marks is %d",avg); 
+if(avg>90) 
+{ 
+printf("\n YOUR GRADE IS A"); 
+} 
+else if(avg>90) 
+{ 
+} 
+printf("\n YOUR GRADE IS A"); 
+else if(avg>70 && avg<90) 
+{ 
+} 
+printf("\n YOUR GRADE IS B"); 
+else if(avg>50 && avg<70) 
+{ 
+} 
+printf("\n YOUR GRADE IS C"); 
+else  
+{ 
+} 
+} 
+printf("\n YOUR GRADE IS F"); 
+return 0; 
+}
