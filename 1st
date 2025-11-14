@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main() 
+{ 
+Int moistureLevel; 
+printf(“\n Enter moisture level of a soil”); 
+scanf(“%d”,&moistureLevel); 
+if(moistureLevel>=400cm); 
+{ 
+printf(“\n Motor is off ,soil is getting moist”); 
+} 
+else 
+{ 
+printf(“\n Motor is on,soil is still getting moist”); 
+} 
+return 0; 
+}
