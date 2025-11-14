@@ -1,0 +1,76 @@
+#include<stdio.h> 
+int main() 
+{ 
+int customer_tn,n,total_bill,m; 
+char customer_name[20],customer_add[40]; 
+printf("\n**************WELCOMER TO PIZZA 
+HUT**************"); 
+printf("\n Enter your name:- "); 
+scanf("%s",&customer_name); 
+printf("\n Enter your telephone number:- "); 
+scanf("%d",&customer_tn); 
+printf("\n Enter your address:- "); 
+scanf("%s",&customer_add); 
+printf("\n Enter which pizza you want to order:-\n Enter 1 for Paneer tikka\n 
+2 for Farmhouse \n 3 for Margherita  "); 
+scanf("%d",&m); 
+if(m==1) 
+{ 
+printf("\n Enter how many pizzas you want to order:- "); 
+scanf("%d",&n); 
+total_bill=n*199; 
+printf("\n ------------------------------------"); 
+printf("\n| customer name:- %s                               
+printf("\n| customer telephone no.:- %d                      
+ ",customer_name); 
+ ",customer_tn); 
+printf("\n| customer address.:- %s                           
+ ",customer_add); 
+printf("\n| No. of pizzas customer wants to order:- %d        
+printf("\n| Total Bill:- %d                                   
+",n); 
+",total_bill); 
+printf("\n ------------------------------------"); 
+} 
+else if(m==2) 
+{ 
+printf("\n Enter how many pizzas you want to order:- "); 
+scanf("%d",&n); 
+total_bill=n*299; 
+printf("\n ------------------------------------"); 
+printf("\n| customer name:- %s                               
+printf("\n| customer telephone no.:- %d                      
+printf("\n| customer address.:- %s                           
+ ",customer_name); 
+ ",customer_tn); 
+ ",customer_add); 
+printf("\n| No. of pizzas customer wants to order:- %d        
+printf("\n| Total Bill:- %d                                   
+",n); 
+",total_bill); 
+printf("\n ------------------------------------"); 
+} 
+else if(m==3) 
+{ 
+printf("\n Enter how many pizzas you want to order:- "); 
+scanf("%d",&n); 
+total_bill=n*399; 
+printf("\n ------------------------------------"); 
+printf("\n| customer name:- %s                               
+ ",customer_name); 
+printf("\n| customer telephone no.:- %d                      
+ ",customer_tn); 
+printf("\n| customer address.:- %s                           
+ ",customer_add); 
+printf("\n| No. of pizzas customer wants to order:- %d        
+printf("\n| Total Bill:- %d                                   
+",n); 
+",total_bill); 
+printf("\n ------------------------------------"); 
+} 
+else 
+{ 
+} 
+printf("\n***ERROR***"); 
+return 0;
+}
