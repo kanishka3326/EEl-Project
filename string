@@ -1,0 +1,59 @@
+#include <stdio.h>
+int stringLength(char str[]) {
+    int i = 0;
+    while (str[i] != '\0') {
+        i++;
+    }
+    return i;
+}
+
+void stringCopy(char dest[], char src[]) {
+    int i = 0;
+    while (src[i] != '\0') {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+}
+
+void stringConcat(char str1[], char str2[]) {
+    int i = 0, j = 0;
+
+   
+    while (str1[i] != '\0') {
+        i++;
+    }
+
+    while (str2[j] != '\0') {
+        str1[i] = str2[j];
+        i++;
+        j++;
+    }
+
+    str1[i] = '\0';
+}
+
+int main() {
+    char firstName[50], lastName[50];
+    char fullName[100];
+    char email[50];
+
+    printf("Enter First Name: ");
+    scanf("%s", firstName);
+
+    printf("Enter Last Name: ");
+    scanf("%s", lastName);
+
+    printf("Enter Email: ");
+    scanf("%s", email);
+
+    stringCopy(fullName, firstName); 
+    stringConcat(fullName, " ");      
+    stringConcat(fullName, lastName); 
+
+    printf("\n------- Contact Form Details -------\n");
+    printf("Full Name: %s\n", fullName);
+    printf("Email: %s\n", email);
+    printf("Email Length: %d characters\n", stringLength(email));
+    return 0;
+}
