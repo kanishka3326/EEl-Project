@@ -1,0 +1,61 @@
+#include <stdio.h>
+int main() {
+    FILE *fp;
+    int choice;
+    char filename[] = "data.txt";
+    char buffer[200];
+    char c;
+while (1) {
+        printf("\n======= FILE MENU =======");
+        printf("\n1. Write to file (fprintf)");
+        printf("\n2. Read file (fscanf line by line)");
+        printf("\n3. Show file (fgetc character by character)");
+        printf("\n4. Exit");
+        printf("\nEnter your choice: ");
+        scanf("%d", &choice);
+switch (choice) {
+case 1:
+            fp = fopen(filename, "w");
+            if (fp == NULL) {
+                printf("Error: Could not open %s\n", filename);
+                break;
+            }
+printf("Type text to store in file:\n");
+            getchar();   // clear newline
+            fgets(buffer, sizeof(buffer), stdin);
+fprintf(fp, "%s", buffer);
+            fclose(fp);
+printf("✔ Successfully written to %s\n", filename);
+            break;
+case 2:
+            fp = fopen(filename, "r");
+            if (fp == NULL) {
+                printf("Error: %s not found!\n", filename);
+                break;
+            }
+printf("\n--- Reading (fscanf) ---\n");
+            while (fscanf(fp, "%199[^\n]\n", buffer) != EOF) {
+                printf("%s\n", buffer);
+            }
+fclose(fp);
+            break;
+case 3:
+            fp = fopen(filename, "r");
+            if (fp == NULL) {
+                printf("Error: %s not found!\n", filename);
+                break;
+            }
+printf("\n--- Displaying file character by character ---\n");
+            while ((c = fgetc(fp)) != EOF) {
+                putchar(c);
+   }
+fclose(fp);
+            break;
+case 4:
+            printf("Exiting program...\n");
+default:
+            printf("Invalid choice! Please try again.\n");
+        }
+    }
+return 0;
+} 
